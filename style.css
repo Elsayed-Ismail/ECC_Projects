@@ -131,3 +131,203 @@ nav a:hover {
         left: 20px;
     }
 }
+
+/* تنسيق قسم المنتجات */
+.products-section {
+    padding: 40px 20px;
+    text-align: center;
+    background-color: #fcfcfc;
+}
+
+.products-grid {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+/* تنسيق الكارت نفسه */
+.product-card {
+    background: white;
+    border-radius: 12px;
+    padding: 15px;
+    width: 300px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-8px);
+    /* الكارت بيترفع لفوق لما الماوس ييجي عليه */
+}
+
+.product-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.product-card h3 {
+    color: #2c3e50;
+    margin: 15px 0 10px;
+    font-size: 20px;
+}
+
+.product-card p {
+    font-size: 14px;
+    color: #7f8c8d;
+    line-height: 1.5;
+    margin-bottom: 15px;
+}
+
+.price {
+    display: block;
+    font-size: 22px;
+    font-weight: bold;
+    color: #27ae60;
+    margin-bottom: 20px;
+}
+
+/* تنسيق زرار الواتساب */
+.buy-btn {
+    display: block;
+    background-color: #25D366;
+    color: white;
+    padding: 12px;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.buy-btn:hover {
+    background-color: #128C7E;
+}
+
+/* تنسيق أقسام الموقع الرئيسية */
+.categories-section {
+    padding: 50px 20px;
+    background-color: #fcfcfc;
+}
+
+.categories-grid {
+    display: grid;
+    /* الكود ده بيخلي المربعات تظبط نفسها أوتوماتيك على الموبايل واللابتوب */
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 25px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.category-card {
+    background-color: #ffffff;
+    border: 2px solid #27ae60;
+    /* الإطار الأخضر */
+    border-radius: 12px;
+    padding: 40px 20px;
+    text-align: center;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.04);
+    transition: all 0.3s ease;
+    /* عشان الحركة تكون ناعمة */
+}
+
+.category-card h3 {
+    color: #27ae60;
+    /* الخط الأخضر */
+    font-size: 24px;
+    margin: 0;
+    transition: color 0.3s ease;
+}
+
+/* التأثير السحري لما الماوس ييجي على المربع */
+.category-card:hover {
+    background-color: #27ae60;
+    transform: translateY(-8px);
+    box-shadow: 0 8px 20px rgba(39, 174, 96, 0.3);
+}
+
+.category-card:hover h3 {
+    color: #ffffff;
+    /* الخط يقلب أبيض */
+}
+
+/* تنسيق أقسام الموقع الرئيسية - التصميم الراقي */
+.categories-section {
+    padding: 60px 20px;
+    background-color: #fcfcfc;
+}
+
+.categories-grid {
+    display: grid;
+    /* الكود ده بيخليهم اتنين تحت اتنين */
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    max-width: 1000px;
+    /* بيكبر حجم المربعات */
+    margin: 0 auto;
+}
+
+/* عشان على شاشة الموبايل الصغيرة ييجوا تحت بعض بشكل شيك وميصغروش أوي */
+@media (max-width: 768px) {
+    .categories-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.category-card {
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 16px;
+    /* دوران ناعم للحواف */
+    overflow: hidden;
+    /* عشان الصورة تاخد شكل الدوران */
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    transition: all 0.4s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.category-card img {
+    width: 100%;
+    height: 250px;
+    /* تكبير الصورة عشان تملى العين */
+    object-fit: cover;
+    transition: transform 0.5s ease;
+    /* حركة بطيئة للصورة */
+}
+
+.card-content {
+    padding: 25px;
+    text-align: center;
+    border-top: 4px solid #27ae60;
+    /* خط أخضر شيك بيفصل الصورة عن الكلام */
+}
+
+.category-card h3 {
+    color: #27ae60;
+    font-size: 26px;
+    margin: 0 0 12px 0;
+}
+
+.category-card p {
+    color: #555;
+    font-size: 16px;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* التأثير الفخم لما الماوس ييجي على المربع */
+.category-card:hover {
+    transform: translateY(-10px);
+    /* يترفع لفوق شوية */
+    box-shadow: 0 12px 25px rgba(39, 174, 96, 0.2);
+    /* ظل أخضر خفيف */
+    border-color: #27ae60;
+}
+
+.category-card:hover img {
+    transform: scale(1.08);
+    /* الصورة تعمل زووم (Zoom) ببطء احترافي */
+}
