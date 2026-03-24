@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <title>كتالوج المنتجات | ECC</title>
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌿</text></svg>">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* تنسيقات سريعة للكروت */
+        .product-card {
+            background: white;
+            border-radius: 15px;
+            width: 280px;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s;
+            margin-bottom: 20px;
+            border-top: 4px solid #27ae60;
+        }
+
+        .product-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .product-card img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        .price {
+            color: #27ae60;
+            font-weight: bold;
+            font-size: 1.4em;
+            margin: 15px 0;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h2>مصنع ECC 🌿</h2>
+        <nav>
+            <a href="index.html">الرئيسية</a>
+            <a href="products.html">الكتالوج</a>
+            <a href="contact.html">تواصل معنا</a>
+        </nav>
+    </header>
+
+    <h1 style="text-align:center; color:#2c3e50; margin: 40px 0;">كتالوج منتجاتنا المتميزة</h1>
+
+    <div style="display: flex; justify-content: center; gap: 30px; flex-wrap: wrap; padding: 20px;">
+        <div class="product-card">
+            <img src="https://images.unsplash.com/photo-1601049541289-9b1b7bbbfe19?w=250">
+            <h3 style="color: #2c3e50;">كريم شمع العسل</h3>
+            <p class="price">150 ج.م</p>
+            <a href="https://wa.me/201098195351?text=طلب كريم شمع العسل" class="btn-primary"
+                style="display: block; text-decoration: none;" target="_blank">طلب عبر واتساب ✅</a>
+        </div>
+
+        <div class="product-card">
+            <img src="https://images.unsplash.com/photo-1608248597279-f99d160bfcbc?w=250">
+            <h3 style="color: #2c3e50;">زيت عطري خام</h3>
+            <p class="price">200 ج.م</p>
+            <a href="https://wa.me/201098195351?text=طلب زيت عطري" class="btn-primary"
+                style="display: block; text-decoration: none;" target="_blank">طلب عبر واتساب ✅</a>
+        </div>
+    </div>
+    <a href="https://wa.me/201098195351?text=أهلاً مصنع ECC، محتاج استفسر عن حاجة 🌿" class="whatsapp-float"
+        target="_blank">
+        <svg viewBox="0 0 32 32" width="35" height="35" fill="white">
+            <path
+                d="M16.011 3.016C8.828 3.016 3 8.844 3 16.027c0 2.296.604 4.542 1.744 6.516l-1.682 6.135 6.276-1.646c1.885 1.042 3.995 1.594 6.162 1.594h.01c7.182 0 13.01-5.828 13.01-13.01 0-3.48-1.354-6.75-3.818-9.213-2.463-2.463-5.733-3.817-9.213-3.817zm.01 21.24c-1.948 0-3.854-.52-5.52-1.51l-.396-.235-4.102 1.075 1.094-4-1.26-2.006c-1.083-1.724-1.656-3.714-1.656-5.757 0-5.984 4.87-10.854 10.86-10.854 2.896 0 5.625 1.13 7.677 3.177 2.052 2.053 3.177 4.78 3.177 7.678 0 5.984-4.87 10.854-10.854 10.854zm5.958-8.156c-.328-.162-1.938-.953-2.235-1.063-.296-.11-5.1-.11-.724.162s-1.182 1.063-1.448 1.448c-.266.385-.536.432-.864.27-1.72-.823-3.083-1.666-4.28-3.69-.286-.475.292-.44.92-1.696.162-.328.083-.615-.083-.943-.167-.328-.724-1.745-1.005-2.39-.27-.625-.547-.542-.724-.542-.167 0-.385-.02-.615-.02-.23 0-.604.084-.922.433-.318.348-1.214 1.182-1.214 2.885 0 1.703 1.245 3.354 1.417 3.583.172.23 2.443 3.734 5.912 5.234 2.375 1.026 3.23 1.073 4.417.906 1.344-.19 2.922-1.192 3.333-2.344.41-1.15.41-2.135.286-2.344-.12-.208-.432-.328-.76-.49z" />
+        </svg>
+    </a>
+</body>
+
+</html>

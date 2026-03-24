@@ -1,0 +1,133 @@
+/* 1. استدعاء خط عربي احترافي من جوجل */
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap');
+
+/* 2. التنسيق العام للموقع */
+body {
+    font-family: 'Cairo', sans-serif;
+    margin: 0;
+    background-color: #f8f9fa;
+    /* لون رصاصي فاتح جداً مريح للعين */
+}
+
+/* 3. شريط التنقل (الهيدر) - تصميم مودرن */
+header {
+    background-color: #ffffff;
+    padding: 15px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    /* ظل خفيف تحت الشريط */
+    border-bottom: 3px solid #27ae60;
+    /* خط أخضر شيك بيمثل المصنع */
+}
+
+header h2 {
+    color: #27ae60;
+    margin: 0;
+    font-size: 28px;
+    letter-spacing: 1px;
+}
+
+nav a {
+    color: #2c3e50;
+    text-decoration: none;
+    margin: 0 20px;
+    font-weight: 700;
+    font-size: 18px;
+    transition: all 0.3s ease;
+    /* حركة ناعمة عند الوقوف بالماوس */
+}
+
+nav a:hover {
+    color: #27ae60;
+}
+
+/* 4. تنسيق الزرار العام */
+.btn-primary {
+    background-color: #27ae60;
+    color: white;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    font-family: 'Cairo', sans-serif;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+    box-shadow: 0 4px 6px rgba(39, 174, 96, 0.2);
+}
+
+.btn-primary:hover {
+    background-color: #219150;
+    transform: translateY(-2px);
+    /* الزرار بيترفع لفوق سنة بسيطة */
+}
+
+/* 5. التجاوب مع شاشات الموبايل (Responsive Design) */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        /* يخلي اللوجو والزراير تحت بعض */
+        padding: 15px;
+    }
+
+    nav {
+        margin-top: 15px;
+    }
+
+    nav a {
+        display: inline-block;
+        margin: 5px 10px;
+        font-size: 16px;
+    }
+
+    .contact-box {
+        width: 85%;
+        /* يكبر صندوق التواصل في الموبايل */
+        padding: 20px;
+    }
+
+    .product-card {
+        width: 90%;
+        /* يخلي كارت المنتج واخد عرض الشاشة */
+    }
+}
+
+/* 6. زرار الواتساب العايم (Floating WhatsApp) */
+.whatsapp-float {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 30px;
+    left: 30px;
+    /* خليناه على الشمال عشان ما يغطيش على السكرول */
+    background-color: #25d366;
+    color: #FFF;
+    border-radius: 50px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    /* عشان يفضل دايماً فوق كل حاجة في الصفحة */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.whatsapp-float:hover {
+    background-color: #1ebe57;
+    transform: scale(1.1);
+    /* بيكبر سنة لما تقف عليه */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* تصغير الزرار شوية على الموبايل */
+@media (max-width: 768px) {
+    .whatsapp-float {
+        width: 55px;
+        height: 55px;
+        bottom: 20px;
+        left: 20px;
+    }
+}
