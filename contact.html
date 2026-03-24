@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>تواصل معنا | ECC</title>
+    <title>تواصل معنا | Y-Flower</title>
     <link rel="icon"
         href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌿</text></svg>">
     <link rel="stylesheet" href="style.css">
@@ -35,7 +35,7 @@
 <body>
 
     <header>
-        <h2>مصنع ECC 🌿</h2>
+        <h2>🌿 Y-Flower for Cosmatics </h2>
         <nav>
             <a href="index.html">الرئيسية</a>
             <a href="products.html">الكتالوج</a>
@@ -51,8 +51,8 @@
         <input type="text" id="senderContact" placeholder="رقم الموبايل">
         <textarea id="senderMsg" rows="4" placeholder="اكتب رسالتك هنا..."></textarea><br><br>
 
-        <button id="btnSend" class="btn-primary" style="width: 100%;" onclick="sendData()">إرسال الرسالة
-            للإدارة</button>
+        <button id="btnSend" class="btn-primary" style="width: 100%;" onclick="sendData()">إرسال الطلب
+        </button>
         <p id="successText" style="color: #27ae60; display: none; margin-top: 15px; font-weight: bold;">تم الإرسال
             بنجاح! ✅</p>
     </div>
@@ -86,7 +86,7 @@
 
             fetch(url, { mode: 'no-cors' }).then(function () {
                 document.getElementById("successText").style.display = "block";
-                document.getElementById("btnSend").innerText = "إرسال الرسالة للإدارة";
+                document.getElementById("btnSend").innerText = "إرسال الطلب";
                 document.getElementById("btnSend").disabled = false;
                 document.getElementById("senderName").value = "";
                 document.getElementById("senderContact").value = "";
@@ -94,7 +94,7 @@
             });
         }
     </script>
-    <a href="https://wa.me/201098195351?text=أهلاً مصنع ECC، محتاج استفسر عن حاجة 🌿" class="whatsapp-float"
+    <a href="https://wa.me/201098195351?text=أهلاً Y-Flower، محتاج استفسر عن حاجة 🌿" class="whatsapp-float"
         target="_blank">
         <svg viewBox="0 0 32 32" width="35" height="35" fill="white">
             <path
