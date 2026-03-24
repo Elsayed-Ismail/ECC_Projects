@@ -7,6 +7,7 @@
     <link rel="icon"
         href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌿</text></svg>">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 
 <body>
@@ -22,16 +23,15 @@
 
     <div style="text-align: center; padding: 50px 20px;">
         <h1 style="color: #2c3e50; font-size: 40px; margin-bottom: 10px;">بوابتك الرقمية لعالم الجمال</h1>
-        <p style="font-size: 22px; color: #666; margin-bottom: 30px;">هنا منتجات العناية بالبشرة بأعلى معايير الجودة
+        <p style="font-size: 22px; color: #666; margin-bottom: 30px;">لدينا منتجات العناية بأعلى معايير الجودة
             العالمية.</p>
-        <button class="btn-primary" onclick="window.location.href='products.html'">تصفح منتجاتنا الآن</button>
 
-        <br><br>
+
         <section class="categories-section">
             <h2 style="text-align: center; color: #2c3e50; margin-bottom: 40px; font-size: 32px;">تصفح أقسامنا 🌿</h2>
 
             <div class="categories-grid">
-                <div class="category-card">
+                <div class="category-card" onclick="window.location.href='products.html?category=skin'">
                     <img src="https://www.se7rek.com/uploads/blogitems/source/36622.webp" alt="العناية بالبشرة">
                     <div class="card-content">
                         <h3>العناية بالبشرة</h3>
@@ -39,7 +39,7 @@
                     </div>
                 </div>
 
-                <div class="category-card">
+                <div class="category-card" onclick="window.location.href='products.html?category=hair'">
                     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcToTVZISeC4MR_N6kVVTNVopYani0dXe1OAbA&s"
                         alt="العناية بالشعر">
                     <div class="card-content">
@@ -48,7 +48,7 @@
                     </div>
                 </div>
 
-                <div class="category-card">
+                <div class="category-card" onclick="window.location.href='products.html?category=body'">
                     <img src="https://www.moellhausen.com/wp-content/uploads/2022/09/image-fragrances-bodycare_03@2x.jpg"
                         alt="العناية بالجسم">
                     <div class="card-content">
@@ -57,7 +57,7 @@
                     </div>
                 </div>
 
-                <div class="category-card">
+                <div class="category-card" onclick="window.location.href='products.html?category=makeup'">
                     <img src="https://images.unsplash.com/photo-1596462502278-27bfdc403348?auto=format&fit=crop&w=500&q=80"
                         alt="المكياج">
                     <div class="card-content">
@@ -67,7 +67,27 @@
                 </div>
             </div>
         </section>
+        <section class="features-section">
+            <div class="features-container">
+                <div class="feature-box">
+                    <i class="fas fa-leaf"></i>
+                    <h3>طبيعي 100%</h3>
+                    <p>منتجاتنا خالية تماماً من المواد الكيميائية الضارة ومستخلصة من الطبيعة لضمان أمان بشرتك.</p>
+                </div>
 
+                <div class="feature-box">
+                    <i class="fas fa-shipping-fast"></i>
+                    <h3>توصيل سريع</h3>
+                    <p>نوفر شحن سريع وآمن لجميع المحافظات لتصلك منتجاتنا حتى باب منزلك في أسرع وقت.</p>
+                </div>
+
+                <div class="feature-box">
+                    <i class="fas fa-shield-alt"></i>
+                    <h3>جودة مضمونة</h3>
+                    <p>نلتزم بأعلى معايير الجودة والتصنيع لضمان أفضل وأسرع نتيجة لجمالك.</p>
+                </div>
+            </div>
+        </section>
     </div>
     <a href="https://wa.me/201098195351?text=أهلاً Y-Flower، محتاج استفسر عن حاجة 🌿" class="whatsapp-float"
         target="_blank">
@@ -76,6 +96,28 @@
                 d="M16.011 3.016C8.828 3.016 3 8.844 3 16.027c0 2.296.604 4.542 1.744 6.516l-1.682 6.135 6.276-1.646c1.885 1.042 3.995 1.594 6.162 1.594h.01c7.182 0 13.01-5.828 13.01-13.01 0-3.48-1.354-6.75-3.818-9.213-2.463-2.463-5.733-3.817-9.213-3.817zm.01 21.24c-1.948 0-3.854-.52-5.52-1.51l-.396-.235-4.102 1.075 1.094-4-1.26-2.006c-1.083-1.724-1.656-3.714-1.656-5.757 0-5.984 4.87-10.854 10.86-10.854 2.896 0 5.625 1.13 7.677 3.177 2.052 2.053 3.177 4.78 3.177 7.678 0 5.984-4.87 10.854-10.854 10.854zm5.958-8.156c-.328-.162-1.938-.953-2.235-1.063-.296-.11-5.1-.11-.724.162s-1.182 1.063-1.448 1.448c-.266.385-.536.432-.864.27-1.72-.823-3.083-1.666-4.28-3.69-.286-.475.292-.44.92-1.696.162-.328.083-.615-.083-.943-.167-.328-.724-1.745-1.005-2.39-.27-.625-.547-.542-.724-.542-.167 0-.385-.02-.615-.02-.23 0-.604.084-.922.433-.318.348-1.214 1.182-1.214 2.885 0 1.703 1.245 3.354 1.417 3.583.172.23 2.443 3.734 5.912 5.234 2.375 1.026 3.23 1.073 4.417.906 1.344-.19 2.922-1.192 3.333-2.344.41-1.15.41-2.135.286-2.344-.12-.208-.432-.328-.76-.49z" />
         </svg>
     </a>
+
+    <footer class="site-footer">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <h2>Y-Flower 🌸</h2>
+                <p>بوابتك الرقمية لعالم الجمال الطبيعي</p>
+            </div>
+
+            <div class="footer-social">
+                <a href="https://www.facebook.com/share/1G98bTrwDa/" target="_blank"><i class="fab fa-facebook-f"></i>
+                    Facebook</a>
+                <a href="https://www.instagram.com/elsayed_elazhary23?igsh=MXZraWo3eDF3cjg5cQ==" target="_blank"><i
+                        class="fab fa-instagram"></i> Instagram</a>
+                <a href="https://wa.me/2010981935" target="_blank"><i class="fab fa-whatsapp"></i> Whatsapp</a>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2026 جميع الحقوق محفوظة لشركة Y-Flower لمستحضرات التجميل.</p>
+        </div>
+    </footer>
+
 </body>
 
 </html>

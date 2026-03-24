@@ -331,3 +331,233 @@ nav a:hover {
     transform: scale(1.08);
     /* الصورة تعمل زووم (Zoom) ببطء احترافي */
 }
+
+/* تنسيق الفوتر (نهاية الموقع) */
+.site-footer {
+    background-color: #2c3e50;
+    /* لون كحلي غامق شيك جداً */
+    color: #ecf0f1;
+    padding: 50px 20px 20px;
+    margin-top: 60px;
+    /* مسافة بينه وبين الأقسام اللي فوق */
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    /* عشان يظبط أوتوماتيك على شاشة الموبايل */
+    justify-content: space-around;
+    align-items: center;
+    max-width: 1100px;
+    margin: 0 auto;
+    border-bottom: 1px solid #34495e;
+    /* خط خفيف يفصل عن حقوق الملكية */
+    padding-bottom: 30px;
+    margin-bottom: 20px;
+}
+
+.footer-logo h2 {
+    color: #27ae60;
+    /* اسم البراند بالأخضر */
+    font-size: 28px;
+    margin: 0 0 10px 0;
+}
+
+.footer-logo p {
+    margin: 0;
+    font-size: 15px;
+    color: #bdc3c7;
+}
+
+.footer-social {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+/* تنسيق زراير السوشيال ميديا */
+.footer-social a {
+    color: #ffffff;
+    text-decoration: none;
+    background-color: #34495e;
+    padding: 10px 25px;
+    border-radius: 30px;
+    /* زراير مدورة شيك */
+    font-size: 15px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+/* التأثير لما الماوس ييجي على الزراير */
+.footer-social a:hover {
+    background-color: #27ae60;
+    /* الزرار ينور أخضر */
+    transform: translateY(-5px);
+    /* ينط لفوق نطة خفيفة */
+    box-shadow: 0 5px 15px rgba(39, 174, 96, 0.4);
+}
+
+.footer-bottom p {
+    margin: 0;
+    font-size: 14px;
+    color: #95a5a6;
+}
+
+/* تنسيق الأيقونات جوا الزراير */
+.footer-social i {
+    margin-left: 8px;
+    /* مسافة صغيرة بين الأيقونة والكلمة */
+    font-size: 18px;
+    /* تكبير الأيقونة شوية */
+}
+
+/* تنسيق قسم المميزات (لماذا Y-Flower؟) */
+.features-section {
+    background-color: #f4fbf7;
+    /* خلفية خضراء فاتحة جداً تليق مع البراند */
+    padding: 70px 20px;
+    margin-top: 20px;
+}
+
+.features-container {
+    display: flex;
+    flex-wrap: wrap;
+    /* عشان ينزلوا تحت بعض في الموبايل بشكل شيك */
+    justify-content: center;
+    gap: 30px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.feature-box {
+    background-color: white;
+    padding: 40px 20px;
+    border-radius: 12px;
+    text-align: center;
+    width: 300px;
+    /* عرض ثابت عشان المربعات تبقى قد بعض */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+    border-bottom: 4px solid #27ae60;
+    /* خط أخضر تقيل من تحت بيدي فخامة */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* الحركة لما الماوس ييجي على المربع */
+.feature-box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 25px rgba(39, 174, 96, 0.15);
+}
+
+/* تنسيق الأيقونات الكبيرة */
+.feature-box i {
+    font-size: 45px;
+    /* تكبير الأيقونة */
+    color: #27ae60;
+    margin-bottom: 20px;
+}
+
+.feature-box h3 {
+    color: #2c3e50;
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+
+.feature-box p {
+    color: #7f8c8d;
+    font-size: 15px;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* تنسيق كتالوج المنتجات */
+.products-catalog {
+    padding: 60px 20px;
+    background-color: #ffffff;
+}
+
+.filter-buttons {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.filter-btn {
+    background-color: transparent;
+    border: 2px solid #27ae60;
+    color: #27ae60;
+    padding: 10px 20px;
+    margin: 5px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+    background-color: #27ae60;
+    color: white;
+}
+
+.catalog-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.catalog-card {
+    background: white;
+    border: 1px solid #eee;
+    border-radius: 12px;
+    padding: 15px;
+    width: 280px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease;
+}
+
+.catalog-card:hover {
+    transform: translateY(-8px);
+    border-color: #27ae60;
+}
+
+.catalog-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.catalog-card h3 {
+    color: #2c3e50;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.catalog-card .price {
+    color: #27ae60;
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.buy-btn {
+    display: block;
+    background-color: #25D366;
+    /* لون الواتساب الأصلي */
+    color: white;
+    padding: 12px;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.buy-btn:hover {
+    background-color: #128C7E;
+}
