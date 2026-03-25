@@ -1,106 +1,228 @@
 <!DOCTYPE html>
+
 <html dir="rtl">
 
+
+
 <head>
+
     <meta charset="UTF-8">
+
     <title>تواصل معنا | Y-Flower</title>
+
     <link rel="icon"
         href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌿</text></svg>">
+
     <link rel="stylesheet" href="style.css">
+
     <style>
         .contact-box {
+
             background: white;
+
             padding: 40px;
+
             border-radius: 15px;
+
             width: 50%;
+
             margin: 50px auto;
+
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+
             text-align: center;
+
             border-top: 5px solid #27ae60;
+
         }
 
+
+
         input,
+
         textarea {
+
             width: 90%;
+
             padding: 15px;
+
             margin: 10px 0;
+
             border: 1px solid #ddd;
+
             border-radius: 8px;
+
             font-family: 'Cairo', sans-serif;
+
             font-size: 16px;
+
         }
     </style>
+
 </head>
+
+
 
 <body>
 
+
+
     <header>
+
         <h2>🌿 Y-Flower for Cosmetics </h2>
+
         <nav>
+
             <a href="index.html">الرئيسية</a>
+
             <a href="products.html">الكتالوج</a>
+
             <a href="contact.html">تواصل معنا</a>
+
+
+
         </nav>
+
     </header>
 
+
+
     <div class="contact-box">
+
         <h2 style="color: #2c3e50;">📞 إدارة المبيعات والتواصل</h2>
+
         <p style="color: #666; margin-bottom: 20px;">نسعد باستقبال طلبات الجملة واستفساراتكم</p>
 
+
+
         <input type="text" id="senderName" placeholder="اسمك بالكامل">
+
         <input type="text" id="senderContact" placeholder="رقم الموبايل">
+
         <textarea id="senderMsg" rows="4" placeholder="اكتب رسالتك هنا..."></textarea><br><br>
 
-        <button id="btnSend" class="btn-primary" style="width: 100%;" onclick="sendData()">إرسال الطلب
+
+
+        <button id="btnSend" class="submit-btn" onclick="sendData()">
+            <i class="fas fa-paper-plane"></i> إرسال الطلب
         </button>
-        <p id="successText" style="color: #27ae60; display: none; margin-top: 15px; font-weight: bold;">تم الإرسال
-            بنجاح! ✅</p>
+        <p id="successText"
+            style="color: #27ae60; display: none; margin-top: 15px; font-weight: bold; text-align: center;">تم الإرسال
+            بنجاح! فريقنا هيتواصل معاك في أقرب وقت ✅</p>
+
     </div>
 
-    <div style="text-align: center; padding: 20px; margin-bottom: 50px;">
-        <h3 style="color: #2c3e50;">📍 موقعنا على الخريطة</h3>
-        <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3453.2123456789!2d31.2345678!3d30.0444196!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzDCsDAyJzQwLjAiTiAzMcKwMTQnMDQuNCJF!5e0!3m2!1sar!2seg!4v1625000000000!5m2!1sar!2seg"
-            width="80%" height="350" style="border:0; border-radius: 15px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);"
-            allowfullscreen="" loading="lazy"></iframe>
-    </div>
 
+    <section class="contact-section">
+
+        <div class="contact-boxes">
+            <a href="https://maps.google.com/?q=دمياط" target="_blank" class="contact-box">
+                <h2>📍 الموقع</h2>
+                <p>دمياط، مصر</p>
+            </a>
+
+            <a href="mailto:sales@yourdomain.com" class="contact-box">
+                <h2>✉️ البريد الإلكتروني</h2>
+                <p>elazhary010@gmail.com</p>
+            </a>
+
+            <a href="tel:+201012345678" class="contact-box">
+                <h2>📞 إدارة المبيعات</h2>
+                <p>01098195351</p>
+            </a>
+        </div>
+    </section>
     <script>
+
         function sendData() {
+
             // ⚠️ متنساش تحط الرابط السحري بتاع جوجل شيت هنا بدل الجملة دي ⚠️
+
             var magicLink = "https://script.google.com/macros/s/AKfycbxuJICEpFRCRcMOLUeCNiHcik2NF23PJWGxdNVyRR58bs7K_rQfhGrLMIi-VhXNzYORRg/exec";
 
+
+
             var name = document.getElementById("senderName").value;
+
             var contact = document.getElementById("senderContact").value;
+
             var message = document.getElementById("senderMsg").value;
 
+
+
             if (name == "" || contact == "" || message == "") {
+
                 alert("املى البيانات الأول!");
+
                 return;
+
             }
 
+
+
             document.getElementById("btnSend").innerText = "جاري الإرسال...";
+
             document.getElementById("btnSend").disabled = true;
+
+
 
             var url = magicLink + "?name=" + encodeURIComponent(name) + "&contact=" + encodeURIComponent(contact) + "&message=" + encodeURIComponent(message);
 
+
+
             fetch(url, { mode: 'no-cors' }).then(function () {
+
                 document.getElementById("successText").style.display = "block";
+
                 document.getElementById("btnSend").innerText = "إرسال الطلب";
+
                 document.getElementById("btnSend").disabled = false;
+
                 document.getElementById("senderName").value = "";
+
                 document.getElementById("senderContact").value = "";
+
                 document.getElementById("senderMsg").value = "";
+
             });
+
         }
+
     </script>
+
     <a href="https://wa.me/201098195351?text=أهلاً Y-Flower، محتاج استفسر عن حاجة 🌿" class="whatsapp-float"
         target="_blank">
+
         <svg viewBox="0 0 32 32" width="35" height="35" fill="white">
+
             <path
                 d="M16.011 3.016C8.828 3.016 3 8.844 3 16.027c0 2.296.604 4.542 1.744 6.516l-1.682 6.135 6.276-1.646c1.885 1.042 3.995 1.594 6.162 1.594h.01c7.182 0 13.01-5.828 13.01-13.01 0-3.48-1.354-6.75-3.818-9.213-2.463-2.463-5.733-3.817-9.213-3.817zm.01 21.24c-1.948 0-3.854-.52-5.52-1.51l-.396-.235-4.102 1.075 1.094-4-1.26-2.006c-1.083-1.724-1.656-3.714-1.656-5.757 0-5.984 4.87-10.854 10.86-10.854 2.896 0 5.625 1.13 7.677 3.177 2.052 2.053 3.177 4.78 3.177 7.678 0 5.984-4.87 10.854-10.854 10.854zm5.958-8.156c-.328-.162-1.938-.953-2.235-1.063-.296-.11-5.1-.11-.724.162s-1.182 1.063-1.448 1.448c-.266.385-.536.432-.864.27-1.72-.823-3.083-1.666-4.28-3.69-.286-.475.292-.44.92-1.696.162-.328.083-.615-.083-.943-.167-.328-.724-1.745-1.005-2.39-.27-.625-.547-.542-.724-.542-.167 0-.385-.02-.615-.02-.23 0-.604.084-.922.433-.318.348-1.214 1.182-1.214 2.885 0 1.703 1.245 3.354 1.417 3.583.172.23 2.443 3.734 5.912 5.234 2.375 1.026 3.23 1.073 4.417.906 1.344-.19 2.922-1.192 3.333-2.344.41-1.15.41-2.135.286-2.344-.12-.208-.432-.328-.76-.49z" />
+
         </svg>
+
     </a>
+    <footer class="site-footer">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <h2>Y-Flower 🌸</h2>
+                <p>بوابتك الرقمية لعالم الجمال الطبيعي</p>
+            </div>
+
+            <div class="footer-social">
+                <a href="https://www.facebook.com/share/1G98bTrwDa/" target="_blank"><i class="fab fa-facebook-f"></i>
+                    Facebook</a>
+                <a href="https://www.instagram.com/elsayed_elazhary23?igsh=MXZraWo3eDF3cjg5cQ==" target="_blank"><i
+                        class="fab fa-instagram"></i> Instagram</a>
+                <a href="https://wa.me/20109819351" target="_blank"><i class="fab fa-whatsapp"></i> Whatsapp</a>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2026 جميع الحقوق محفوظة لشركة Y-Flower لمستحضرات التجميل.</p>
+        </div>
+    </footer>
 </body>
+
+
 
 </html>

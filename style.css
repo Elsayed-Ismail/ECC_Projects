@@ -561,3 +561,204 @@ nav a:hover {
 .buy-btn:hover {
     background-color: #128C7E;
 }
+
+/* --- تنسيقات صفحة تواصل معنا --- */
+.contact-section {
+    padding: 60px 20px;
+    background-color: #fcfcfc;
+}
+
+.contact-container {
+    display: flex;
+    flex-wrap: wrap;
+    /* عشان ينزلوا تحت بعض في الموبايل */
+    max-width: 1100px;
+    margin: 0 auto;
+    gap: 40px;
+}
+
+/* تنسيق كروت المعلومات */
+.contact-info {
+    flex: 1;
+    min-width: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.info-box {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+    border-right: 4px solid #27ae60;
+    /* خط أخضر شيك على اليمين */
+    transition: transform 0.3s ease;
+}
+
+.info-box:hover {
+    transform: translateY(-5px);
+}
+
+.info-box i {
+    font-size: 30px;
+    color: #27ae60;
+    margin-bottom: 15px;
+}
+
+.info-box h3 {
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+
+/* تنسيق الفورم نفسها */
+.contact-form-container {
+    flex: 1;
+    min-width: 300px;
+    background: white;
+    padding: 35px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+}
+
+.contact-form h3 {
+    color: #27ae60;
+    margin-bottom: 25px;
+    text-align: center;
+    font-size: 24px;
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: #2c3e50;
+    font-weight: bold;
+}
+
+/* شكل المربعات اللي العميل بيكتب فيها */
+.input-group input,
+.input-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #eee;
+    border-radius: 8px;
+    font-size: 15px;
+    font-family: inherit;
+    transition: all 0.3s ease;
+    box-sizing: border-box;
+    /* عشان المربع ميخرجش بره الشاشة */
+}
+
+/* لما العميل يدوس جوه المربع عشان يكتب */
+.input-group input:focus,
+.input-group textarea:focus {
+    border-color: #27ae60;
+    outline: none;
+    box-shadow: 0 0 8px rgba(39, 174, 96, 0.2);
+}
+
+/* زرار الإرسال */
+.submit-btn {
+    width: 100%;
+    background-color: #27ae60;
+    color: white;
+    padding: 14px;
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.submit-btn:hover {
+    background-color: #219653;
+}
+
+/* تنسيق القسم بالكامل وتوسيط المحتوى */
+.contact-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* بتخلي الفورم والمربعات في النص بالضبط */
+    padding: 50px 20px;
+    font-family: Arial, sans-serif;
+    direction: rtl;
+    /* عشان الاتجاه يكون من اليمين للشمال */
+}
+
+/* تنسيق الفورم */
+.form-container {
+    width: 100%;
+    max-width: 600px;
+    /* أقصى عرض للفورم عشان ميبقاش عريض أوي */
+    margin-bottom: 50px;
+    /* مسافة بين الفورم والمربعات اللي تحته */
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-container input,
+.form-container textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.form-container button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.form-container button:hover {
+    background-color: #0056b3;
+}
+
+/* تنسيق حاوية مربعات التواصل */
+.contact-boxes {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+    /* عشان لو حد فاتح من موبايل المربعات تنزل تحت بعض بدل ما تخرج برا الشاشة */
+    width: 100%;
+}
+
+/* تنسيق المربعات نفسها */
+.contact-box {
+    text-decoration: none;
+    /* بنشيل الخط اللي تحت اللينك */
+    color: #333;
+    /* لون النص */
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 220px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    border: 1px solid #eee;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* تأثير لما الماوس ييجي على المربع */
+.contact-box:hover {
+    transform: translateY(-5px);
+    /* المربع بيترفع لفوق شوية */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    /* الظل بيزيد عشان يدي إحساس إنه زرار */
+}
