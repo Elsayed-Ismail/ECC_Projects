@@ -115,7 +115,6 @@
         </div>
     </section>
 
-    </div>
     <a href="https://wa.me/201098195351?text=أهلاً Y-Flower، محتاج استفسر عن حاجة 🌿" class="whatsapp-float"
         target="_blank">
         <svg viewBox="0 0 32 32" width="35" height="35" fill="white">
@@ -136,7 +135,7 @@
                     Facebook</a>
                 <a href="https://www.instagram.com/elsayed_elazhary23?igsh=MXZraWo3eDF3cjg5cQ==" target="_blank"><i
                         class="fab fa-instagram"></i> Instagram</a>
-                <a href="https://wa.me/2010981935" target="_blank"><i class="fab fa-whatsapp"></i> Whatsapp</a>
+                <a href="https://wa.me/20109819351" target="_blank"><i class="fab fa-whatsapp"></i> Whatsapp</a>
             </div>
         </div>
 
@@ -149,24 +148,38 @@
             const products = document.querySelectorAll('.catalog-card');
             const buttons = document.querySelectorAll('.filter-btn');
 
+            // 1. تظبيط ألوان الأزرار (الزرار النشط ينور)
             buttons.forEach(btn => btn.classList.remove('active'));
-            // عشان ينور الزرار الصح
             buttons.forEach(btn => {
                 if (btn.getAttribute('onclick').includes(category)) {
                     btn.classList.add('active');
                 }
             });
 
+            // 2. الفلترة مع الحركة الناعمة (Animation)
             products.forEach(product => {
-                if (category === 'all' || product.getAttribute('data-category') === category) {
-                    product.style.display = 'block';
-                } else {
-                    product.style.display = 'none';
-                }
+                // خطوة أ: نخفي كل الكروت الأول بتأثير ناعم (يصغر ويختفي)
+                product.classList.add('hide-card');
+
+                // خطوة ب: نستنى 300 ملي ثانية (وقت الحركة) وبعدين نرتب المنتجات
+                setTimeout(() => {
+                    if (category === 'all' || product.getAttribute('data-category') === category) {
+                        // لو المنتج تبع القسم، نرجعه للمساحة
+                        product.style.display = 'block';
+
+                        // ندي المتصفح وقت صغير جداً يقرأ التعديل، وبعدين نظهره بنعومة
+                        setTimeout(() => {
+                            product.classList.remove('hide-card');
+                        }, 20);
+                    } else {
+                        // لو مش تبع القسم، نشيله من المساحة تماماً
+                        product.style.display = 'none';
+                    }
+                }, 300);
             });
         }
 
-        // الكود ده بيشتغل أول ما صفحة الكتالوج تفتح عشان يفلتر أوتوماتيك
+        // الكود ده بيقرأ الرابط لو حد داخل على قسم معين مباشرة
         window.onload = function () {
             const urlParams = new URLSearchParams(window.location.search);
             const category = urlParams.get('category') || 'all';

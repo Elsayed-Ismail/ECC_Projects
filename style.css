@@ -7,7 +7,13 @@ body {
     margin: 0;
     background-color: #f8f9fa;
     /* لون رصاصي فاتح جداً مريح للعين */
+    /* السطور الجديدة عشان نثبت الفوتر */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    /* ده بيخلي أقل طول للـ body هو 100% من طول الشاشة */
 }
+
 
 /* 3. شريط التنقل (الهيدر) - تصميم مودرن */
 header {
@@ -729,6 +735,7 @@ nav a:hover {
     background-color: #0056b3;
 }
 
+
 /* تنسيق حاوية مربعات التواصل */
 .contact-boxes {
     display: flex;
@@ -761,4 +768,81 @@ nav a:hover {
     /* المربع بيترفع لفوق شوية */
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
     /* الظل بيزيد عشان يدي إحساس إنه زرار */
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* وده تنسيق مقترح لشكل الزرار عشان يطلع شيك ومناسب لمجال التجميل */
+.cta-button {
+    display: inline-block;
+    background-color: #4CAF50;
+    /* ممكن تغيره للون الأخضر أو الوردي بتاع البراند */
+    color: white;
+    padding: 12px 24px;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: bold;
+    margin-top: 15px;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #45a049;
+    /* درجة أغمق شوية لما الماوس ييجي عليه */
+}
+
+/* تنسيق الزر الأصلي، قمنا بزيادة الحشوة وحجم الخط */
+.cta-button {
+    display: inline-block;
+    background-color: #4CAF50;
+    /* نفس لونك الأخضر المميز */
+    color: white;
+    padding: 16px 36px;
+    /* زيادة الحشوة (يكبر شوية) */
+    text-decoration: none;
+    border-radius: 30px;
+    /* زيادة الانحناء قليلاً ليناسب الحجم الأكبر */
+    font-weight: bold;
+    font-size: 1.2rem;
+    /* زيادة حجم الخط */
+    margin-top: 25px;
+    /* زيادة المسافة العلوية لفصله عن النص */
+
+    /* أهم سطر للتأثير الانسيابي: نضيف transform هنا */
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* تأثير التمرير (Hover): عندما يضع المستخدم الماوس على الزر */
+.cta-button:hover {
+    background-color: #45a049;
+    /* درجة أغمق شوية كما هو معتاد */
+
+    /* هذا هو السحر! يحرك الزر لأعلى بمقدار 5 بكسل */
+    transform: translateY(-5px);
+}
+
+/* الكلاس ده هيكون مسؤول عن شكل الكارت وحركته */
+.catalog-card {
+    /* باقي الخصائص بتاعتك زي ما هي */
+    transition: opacity 0.2s ease-in-out, transform 0.2s ease-in-out;
+    opacity: 1;
+    transform: scale(1);
+}
+
+/* الكلاس ده هنستخدمه في الجافا سكريبت عشان نخفي الكارت بنعومة */
+.hide-card {
+    opacity: 0;
+    transform: scale(0.8);
+    pointer-events: none;
+    /* عشان العميل مايقدرش يدوس عليه وهو مختفي */
+}
+
+/* الكلاسات دي هي الأجزاء اللي شايلة المحتوى الأساسي في صفحاتك */
+.products-catalog,
+.contact-box,
+.features-section {
+    flex: 1;
+    /* ده معناه: اتمدد واملا كل المساحة الفاضية المتاحة */
 }
